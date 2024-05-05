@@ -21,7 +21,7 @@ def process_file_to_series(path: str) -> TimeSeries:
 
     file = load_file(path)
 
-    regex = re.compile("(\d+) - (\d+\/\d+\/\d+) - (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)")
+    regex = re.compile(r"(\d+) - (\d+\/\d+\/\d+) - (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)")
 
     array = []
 
@@ -52,7 +52,7 @@ def process_file_to_dataframe(path: str) -> DataFrame:
 
     file = load_file(path)
 
-    regex = re.compile("(\d+) - (\d+\/\d+\/\d+) - (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)")
+    regex = re.compile(r"(\d+) - (\d+\/\d+\/\d+) - (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)")
 
     array = []
 
