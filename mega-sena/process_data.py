@@ -1,4 +1,5 @@
 import re
+import numpy as np
 from pandas import DataFrame
 from darts import TimeSeries
 
@@ -38,7 +39,9 @@ def process_file_to_series(path: str) -> TimeSeries:
     array.reverse()
 
     pd = DataFrame(
-        array, columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"]
+        array,
+        columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"],
+        dtype=np.uint8,
     )
 
     return TimeSeries.from_dataframe(
@@ -68,5 +71,7 @@ def process_file_to_dataframe(path: str) -> DataFrame:
     array.reverse()
 
     return DataFrame(
-        array, columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"]
+        array,
+        columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"],
+        dtype=np.uint8,
     )
