@@ -16,7 +16,7 @@ def exclude_none(l: tuple) -> list:
     return r
 
 
-def process_file_to_series(path: str) -> str:
+def process_file_to_series(path: str) -> TimeSeries:
 
     file = load_file(path)
 
@@ -46,7 +46,7 @@ def process_file_to_series(path: str) -> str:
     )
 
 
-def process_file_to_dataframe(path: str) -> str:
+def process_file_to_dataframe(path: str) -> DataFrame:
 
     file = load_file(path)
 
