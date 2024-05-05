@@ -41,7 +41,6 @@ def process_file_to_series(path: str) -> TimeSeries:
     pd = DataFrame(
         array,
         columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"],
-        dtype=np.uint8,
     )
 
     return TimeSeries.from_dataframe(
@@ -73,5 +72,4 @@ def process_file_to_dataframe(path: str) -> DataFrame:
     return DataFrame(
         array,
         columns=["it", "data0", "data1", "data2", "data3", "data4", "data5"],
-        dtype=np.uint8,
     )
